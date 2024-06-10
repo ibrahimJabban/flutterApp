@@ -1,63 +1,56 @@
-import 'package:flutter/material.dart';
-import './models/category.dart';
-import './models/trip.dart';
+import 'models/category.dart';
+import 'models/trip.dart';
 
-const Categories_data = const [
+const categoriesData = [
   Category(
     id: 'c1',
     title: 'Bergen',
-    imageUrl:
-        'https://images.unsplash.com/photo-1575728252059-db43d03fc2de?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NTh8fG1vdW5hdGluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=',
+    imageUrl: 'android/assets/a.avif',
   ),
   Category(
     id: 'c2',
     title: 'See',
-    imageUrl:
-        'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bGFrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
+    imageUrl: 'android/assets/b.avif',
   ),
   Category(
     id: 'c3',
     title: 'Strände',
-    imageUrl:
-        'https://images.unsplash.com/photo-1493558103817-58b2924bce98?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAxfHxiZWFjaHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
+    imageUrl: 'android/assets/c.avif',
   ),
   Category(
     id: 'c4',
     title: 'Wüste',
-    imageUrl:
-        'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZGVzZXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
+    imageUrl: 'android/assets/d.avif',
   ),
   Category(
     id: 'c5',
     title: 'Alte Städte',
-    imageUrl:
-        'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjR8fHRyYXZlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
+    imageUrl: 'android/assets/e.avif',
   ),
   Category(
     id: 'c6',
     title: 'Andere',
-    imageUrl:
-        'https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c2tpaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=400&q=60',
+    imageUrl: 'android/assets/f.avif',
   ),
 ];
 
-const Trips_data = const [
+const tripsData = [
   Trip(
     id: 'm1',
     categories: [
       'c1',
     ],
-   title: 'Die Alpen',
-    tripType: TripType.Exploration,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1611523658822-385aa008324c?ixid=MXwxMjA3fDB8MHxzZWFyY2h8N3x8bW91bmF0aW5zfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    title: 'Die Alpen',
+    tripType: TripType.exploration,
+    season: Season.winter,
+    imageUrl: 'android/assets/g.avif',
     duration: 20,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -76,17 +69,17 @@ const Trips_data = const [
     categories: [
       'c1',
     ],
-   title: 'Südliche Berge',
-    tripType: TripType.Exploration,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1612456225451-bb8d10d0131d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjZ8fG1vdW5hdGluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    title: 'Südliche Berge',
+    tripType: TripType.exploration,
+    season: Season.winter,
+    imageUrl: 'android/assets/h.avif',
     duration: 10,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -104,16 +97,16 @@ const Trips_data = const [
       'c1',
     ],
     title: 'Hohe Berge',
-    tripType: TripType.Recovery,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1592221912790-2b4df8882ea9?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mzd8fG1vdW5hdGluc3xlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    tripType: TripType.recovery,
+    season: Season.winter,
+    imageUrl: 'android/assets/i.avif',
     duration: 45,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -132,18 +125,19 @@ const Trips_data = const [
       'c1',
     ],
     title: 'Der große See',
-    tripType: TripType.Activities,
-    season: Season.Spring,
-    imageUrl: 'https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?ixid=MXwxMjA3fDB8MHxzZWFyY2h8OXx8bGFrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    tripType: TripType.activities,
+    season: Season.spring,
+    imageUrl: 'android/assets/j.avif',
     duration: 60,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et doloremagna aliqua.',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -160,16 +154,16 @@ const Trips_data = const [
       'c1',
     ],
     title: 'Die kleinen Seen',
-    tripType: TripType.Activities,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1580100586938-02822d99c4a8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjF8fGxha2V8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+    tripType: TripType.activities,
+    season: Season.spring,
+    imageUrl: 'android/assets/k.avif',
     duration: 15,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -187,16 +181,16 @@ const Trips_data = const [
       'c2',
     ],
     title: 'Der Smaragdsee',
-    tripType: TripType.Exploration,
-    season: Season.Summer,
-    imageUrl: 'https://images.unsplash.com/photo-1501785888041-af3ef285b470?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NHx8bGFrZXxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+    tripType: TripType.exploration,
+    season: Season.summer,
+    imageUrl: 'android/assets/l.avif',
     duration: 240,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -214,16 +208,16 @@ const Trips_data = const [
       'c3',
     ],
     title: 'Erster Strand',
-    tripType: TripType.Exploration,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1493558103817-58b2924bce98?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTAxfHxiZWFjaHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+    tripType: TripType.exploration,
+    season: Season.summer,
+    imageUrl: 'android/assets/m.avif',
     duration: 20,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -241,16 +235,16 @@ const Trips_data = const [
       'c3',
     ],
     title: 'Der große Strand',
-    tripType: TripType.Recovery,
-    season: Season.Spring,
-    imageUrl: 'https://images.unsplash.com/photo-1519046904884-53103b34b206?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Mnx8YmVhY2h8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    tripType: TripType.recovery,
+    season: Season.summer,
+    imageUrl: 'android/assets/n.avif',
     duration: 35,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -267,17 +261,17 @@ const Trips_data = const [
     categories: [
       'c3',
     ],
-   title: 'Felsenstrand',
-    tripType: TripType.Exploration,
-    season: Season.Summer,
-    imageUrl: 'https://images.unsplash.com/photo-1519602035691-16ac091344ef?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MjE1fHxiZWFjaHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+    title: 'Felsenstrand',
+    tripType: TripType.exploration,
+    season: Season.summer,
+    imageUrl: 'android/assets/o.avif',
     duration: 45,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -295,16 +289,16 @@ const Trips_data = const [
       'c4',
     ],
     title: 'Die Große Wüste',
-    tripType: TripType.Activities,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1473580044384-7ba9967e16a0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8ZGVzZXJ0fGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+    tripType: TripType.activities,
+    season: Season.winter,
+    imageUrl: 'android/assets/p.avif',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -323,16 +317,16 @@ const Trips_data = const [
       'c1',
     ],
     title: 'Die Westwüste',
-    tripType: TripType.Activities,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+    tripType: TripType.activities,
+    season: Season.winter,
+    imageUrl: 'android/assets/q.avif',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -350,16 +344,16 @@ const Trips_data = const [
       'c4',
     ],
     title: 'Die Sandwüste',
-    tripType: TripType.Activities,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1452022582947-b521d8779ab6?ixid=MXwxMjA3fDB8MHxzZWFyY2h8ODN8fGRlc2VydHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+    tripType: TripType.activities,
+    season: Season.winter,
+    imageUrl: 'android/assets/r.avif',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -377,16 +371,16 @@ const Trips_data = const [
       'c5',
     ],
     title: 'Die erste Stadt',
-    tripType: TripType.Activities,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1498307833015-e7b400441eb8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NDJ8fHRyYXZlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+    tripType: TripType.activities,
+    season: Season.winter,
+    imageUrl: 'android/assets/s.avif',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -404,16 +398,16 @@ const Trips_data = const [
       'c5',
     ],
     title: 'Die zweite Stadt',
-    tripType: TripType.Activities,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1467269204594-9661b134dd2b?ixid=MXwxMjA3fDB8MHxzZWFyY2h8NjR8fHRyYXZlbHxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+    tripType: TripType.activities,
+    season: Season.spring,
+    imageUrl: 'android/assets/t.avif',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -431,16 +425,16 @@ const Trips_data = const [
       'c5',
     ],
     title: 'Die alte Stadt',
-    tripType: TripType.Activities,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1519923041107-e4dc8d9193da?ixid=MXwxMjA3fDB8MHxzZWFyY2h8Njd8fG9sZCUyMGNpdHl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+    tripType: TripType.activities,
+    season: Season.winter,
+    imageUrl: 'android/assets/u.avif',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -457,17 +451,17 @@ const Trips_data = const [
     categories: [
       'c6',
     ],
-   title: 'Skisport',
-    tripType: TripType.Activities,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1605540436563-5bca919ae766?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MXx8c2tpaW5nfGVufDB8fDB8&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+    title: 'Skisport',
+    tripType: TripType.activities,
+    season: Season.winter,
+    imageUrl: 'android/assets/v.avif',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
       'Mittagessen',
-      'Genießen der Landschaft'
+      'Genießen der Landschaft',
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
@@ -486,16 +480,17 @@ const Trips_data = const [
       'c2',
     ],
     title: 'Fallschirmspringen',
-    tripType: TripType.Activities,
-    season: Season.Winter,
-    imageUrl: 'https://images.unsplash.com/photo-1601024445121-e5b82f020549?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTJ8fHBhcmFjaHV0ZSUyMGp1bXBpbmd8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=60',
+    tripType: TripType.activities,
+    season: Season.winter,
+    imageUrl: 'android/assets/w.avif',
     duration: 30,
     activities: [
+      'Fallschirmspringen',
+      'Genießen der Aussicht',
+      'Mittagessen',
       'Besuch von archäologischen Stätten',
       'Stadtrundgang',
       'Einkaufszentren besuchen',
-      'Mittagessen',
-      'Genießen der Landschaft'
     ],
     program: [
       'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',

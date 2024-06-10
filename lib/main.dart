@@ -1,34 +1,96 @@
-// Import von Material Design Widgets aus dem Flutter Framework.
 import 'package:flutter/material.dart';
-// Import der Kategorienbildschirm-Klasse, die als Hauptbildschirm fungiert.
-import 'package:newapp/screens/categoriesScreen.dart';
-// Import der Kategorie Trips Bildschirm-Klasse, die für die Darstellung von Trips einer Kategorie zuständig ist.
-import './screens/category_screen_trips.dart'; 
+import 'app_data.dart';
+import 'screens/category_screen_trips.dart';
+import 'screens/filters_screen.dart';
+import 'screens/trip_detail_screen.dart';
+import 'screens/tabs_screen.dart';
+import 'models/trip.dart';
 
-// Hauptfunktion von Dart, die die MyApp-Anwendung startet.
+// Hauptfunktion der App
 void main() {
   runApp(const MyApp());
 }
 
-// Definition der MyApp Klasse, die von StatelessWidget erbt.
-class MyApp extends StatelessWidget {
-  // Konstruktor für die MyApp Klasse mit einem optionalen 'key' Parameter.
+class MyApp extends StatefulWidget {
   const MyApp({super.key});
 
-  // Überschreibung der build-Methode, die das Aussehen der App definiert.
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  Map<String, bool> _filters = {
+    'summer': false,
+    'winter': false,
+    'family': false,
+  };
+
+  List<Trip> _availableTrips = tripsData;
+  final List<Trip> _favoriteTrips = [];
+
+  // Methode zum Ändern der Filtereinstellungen
+  void _changeFilters(Map<String, bool> filterData) {
+    setState(() {
+      _filters = filterData;
+
+      _availableTrips = tripsData.where((trip) {
+        if (_filters['summer'] == true && !trip.isInSummer) {
+          return false;
+        }
+        if (_filters['winter'] == true && !trip.isInWinter) {
+                    return false;
+        }
+        if (_filters['family'] == true && !trip.isForFamilies) {
+          return false;
+        }
+        return true;
+      }).toList();
+    });
+  }
+
+  // Methode zum Verwalten der Favoriten
+  void _manageFavorite(String tripId) {
+    final existingIndex =
+        _favoriteTrips.indexWhere((trip) => trip.id == tripId);
+    if (existingIndex >= 0) {
+      setState(() {
+        _favoriteTrips.removeAt(existingIndex);
+      });
+    } else {
+      setState(() {
+        _favoriteTrips.add(
+          tripsData.firstWhere((trip) => trip.id == tripId),
+        );
+      });
+    }
+  }
+
+  // Methode zur Überprüfung, ob eine Reise ein Favorit ist
+  bool _isFavorite(String id) {
+    return _favoriteTrips.any((trip) => trip.id == id);
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Travel Demo', // Setzt den Titel der App.
+      title: 'Travel Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue, // Definiert die Hauptfarbe der App.
+        primarySwatch: Colors.blue,
       ),
-     
-      // Definition der Routen der App.
       routes: {
-        '/': (ctx) => CategoriesScreen(), // Standardroute zur Anzeige der Hauptkategorie-Seite.
-        '/category-trips': (ctx) => CategoryTripsScreen(), // Route zur Anzeige der Trips einer bestimmten Kategorie.
+        '/': (ctx) => TabsScreen(favoriteTrips: _favoriteTrips),
+        '/category-trips': (ctx) =>
+            CategoryTripsScreen(availableTrips: _availableTrips),
+        TripDetailScreen.screenRoute: (ctx) => TripDetailScreen(
+              manageFavorite: _manageFavorite,
+              isFavorite: _isFavorite,
+            ),
+        FiltersScreen.screenRoute: (ctx) => FiltersScreen(
+              currentFilters: _filters,
+              saveFilters: _changeFilters,
+            ),
       },
     );
   }
 }
+

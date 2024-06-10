@@ -1,59 +1,58 @@
-// Import des Material Design-Pakets von Flutter für UI-Elemente
 import 'package:flutter/material.dart';
-// Import der Bildschirmseite, die spezifische Trips für eine Kategorie anzeigt
-import '../screens/category_screen_trips.dart';
 
-// Definition der Klasse CategoryItem, die von StatelessWidget abgeleitet ist
+// Definition eines Widgets zur Darstellung einer Kategorie
 class CategoryItem extends StatelessWidget {
-  // Definition der Eigenschaften des CategoryItem
-  final String id;
-  final String title;
-  final String imageUrl;
+  final String id; // Eindeutige Kennung der Kategorie
+  final String title; // Titel der Kategorie
+  final String imageUrl; // URL des Bildes der Kategorie
 
-  // Konstruktor für CategoryItem, der die id, den Titel und das Bild-URL erwartet
-  CategoryItem(this.id, this.title, this.imageUrl);
+  const CategoryItem({
+    super.key,
+    required this.id,
+    required this.title,
+    required this.imageUrl,
+  });
 
-  // Methode, die aufgerufen wird, wenn das Kategorie-Element ausgewählt wird
+  // Methode zur Navigation bei Auswahl einer Kategorie
   void selectCategory(BuildContext context) {
-    // Verwendung des Navigator-Objekts von Flutter, um zur nächsten Seite zu navigieren
     Navigator.of(context).pushNamed(
-     '/category-trips',  // Die Route, zu der navigiert werden soll
-     arguments: {        // Übergabe von Argumenten, die die ID und den Titel der Kategorie enthalten
-      'id': id,
-      'title': title,
-     }
+      '/category-trips',
+      arguments: {
+        'id': id,
+        'title': title,
+      },
     );
   }
 
-  // Überschreiben der build-Methode, die das Aussehen des Widgets definiert
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () => selectCategory(context),  // Führt die selectCategory-Methode beim Tippen aus
-      splashColor: Theme.of(context).primaryColor,  // Farbe des Wasserfleck-Effekts beim Tippen
-      borderRadius: BorderRadius.circular(15),  // Rundet die Ecken des InkWell-Widgets
+      onTap: () => selectCategory(context),
+      splashColor: Theme.of(context).primaryColor,
+      borderRadius: BorderRadius.circular(15),
       child: Stack(
         children: [
           ClipRRect(
-            borderRadius: BorderRadius.circular(15),  // Rundet die Ecken des Bildes
-            child: Image.network(
+            borderRadius: BorderRadius.circular(15),
+            child: Image.asset(
               imageUrl,
               height: 250,
-              fit: BoxFit.cover,  // Sorgt dafür, dass das Bild die gesamte Fläche abdeckt
+              width: double.infinity,
+              fit: BoxFit.cover,
             ),
           ),
           Container(
-            padding: EdgeInsets.all(10),
+            padding: const EdgeInsets.all(10),
             alignment: Alignment.center,
-            decoration: BoxDecoration(
-              color: Colors.black.withOpacity(0.4),  // Halbtransparenter schwarzer Hintergrund für den Text
+                        decoration: BoxDecoration(
+              color: Colors.black.withOpacity(0.4),
               borderRadius: BorderRadius.circular(15),
             ),
             child: Text(
               title,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 30,
-                color: Colors.white,  // Weißer Text für bessere Lesbarkeit auf dunklem Hintergrund
+                color: Colors.white,
               ),
             ),
           ),
@@ -62,3 +61,4 @@ class CategoryItem extends StatelessWidget {
     );
   }
 }
+
