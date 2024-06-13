@@ -3,22 +3,26 @@ import 'package:flutter_test/flutter_test.dart';
 import '../widgets/category_item.dart';
 
 void main() {
-  testWidgets('CategoryItem displays correct title and image', (WidgetTester tester) async {
+  testWidgets('CategoryItem displays correctly', (WidgetTester tester) async {
     const categoryItem = CategoryItem(
       id: 'c1',
-      title: 'Test Category',
+      title: 'Bergen',
       imageUrl: 'android/assets/a.avif',
     );
 
     await tester.pumpWidget(
-      MaterialApp(
+      const MaterialApp(
         home: Scaffold(
           body: categoryItem,
         ),
       ),
     );
 
-    expect(find.text('Test Category'), findsOneWidget);
-    expect(find.byType(Image), findsOneWidget);
+    // Überprüfen, ob der Titel des Kategorie-Items angezeigt wird
+    expect(find.text('Bergen'), findsOneWidget);
+
+    // Überprüfen, ob das Bild angezeigt wird
+    final imageFinder = find.byType(Image);
+    expect(imageFinder, findsOneWidget);
   });
 }
