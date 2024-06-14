@@ -83,9 +83,4 @@ Ermöglicht dem Benutzer, Filter anzuwenden, um Reisen basierend auf Jahreszeit 
 - **Erweiterte Filter**: Hinzufügen weiterer Filteroptionen wie Preis, Bewertung etc.
 - **Kartenintegration**: Integration von Karten zur Anzeige der genauen Lage der Reiseziele.
 
-## Lizenz
-
-Dieses Projekt ist unter der MIT-Lizenz lizenziert – siehe die [LICENSE](LICENSE) Datei für Details.
-
-
 
