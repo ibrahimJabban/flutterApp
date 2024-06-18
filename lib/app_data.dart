@@ -5,32 +5,32 @@ const categoriesData = [
   Category(
     id: 'c1',
     title: 'Bergen',
-    imageUrl: 'android/assets/a.avif',
+    imageUrl: 'assets/a.jpg',
   ),
   Category(
     id: 'c2',
     title: 'See',
-    imageUrl: 'android/assets/b.avif',
+    imageUrl: 'assets/b.jpg',
   ),
   Category(
     id: 'c3',
     title: 'Strände',
-    imageUrl: 'android/assets/c.avif',
+    imageUrl: 'assets/c.jpg',
   ),
   Category(
     id: 'c4',
     title: 'Wüste',
-    imageUrl: 'android/assets/d.avif',
+    imageUrl: 'assets/d.jpg',
   ),
   Category(
     id: 'c5',
     title: 'Alte Städte',
-    imageUrl: 'android/assets/e.avif',
+    imageUrl: 'assets/e.jpg',
   ),
   Category(
     id: 'c6',
     title: 'Andere',
-    imageUrl: 'android/assets/f.avif',
+    imageUrl: 'assets/f.jpg',
   ),
 ];
 
@@ -43,7 +43,7 @@ const tripsData = [
     title: 'Die Alpen',
     tripType: TripType.exploration,
     season: Season.winter,
-    imageUrl: 'android/assets/g.avif',
+    imageUrl: 'assets/g.jpg',
     duration: 20,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -72,7 +72,7 @@ const tripsData = [
     title: 'Südliche Berge',
     tripType: TripType.exploration,
     season: Season.winter,
-    imageUrl: 'android/assets/h.avif',
+    imageUrl: 'assets/h.jpg',
     duration: 10,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -99,7 +99,7 @@ const tripsData = [
     title: 'Hohe Berge',
     tripType: TripType.recovery,
     season: Season.winter,
-    imageUrl: 'android/assets/i.avif',
+    imageUrl: 'assets/i.jpg',
     duration: 45,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -127,7 +127,7 @@ const tripsData = [
     title: 'Der große See',
     tripType: TripType.activities,
     season: Season.spring,
-    imageUrl: 'android/assets/j.avif',
+    imageUrl: 'assets/j.jpg',
     duration: 60,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -156,7 +156,7 @@ const tripsData = [
     title: 'Die kleinen Seen',
     tripType: TripType.activities,
     season: Season.spring,
-    imageUrl: 'android/assets/k.avif',
+    imageUrl: 'assets/k.jpg',
     duration: 15,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -183,7 +183,7 @@ const tripsData = [
     title: 'Der Smaragdsee',
     tripType: TripType.exploration,
     season: Season.summer,
-    imageUrl: 'android/assets/l.avif',
+    imageUrl: 'assets/l.jpg',
     duration: 240,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -210,7 +210,7 @@ const tripsData = [
     title: 'Erster Strand',
     tripType: TripType.exploration,
     season: Season.summer,
-    imageUrl: 'android/assets/m.avif',
+    imageUrl: 'assets/m.jpg',
     duration: 20,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -237,7 +237,7 @@ const tripsData = [
     title: 'Der große Strand',
     tripType: TripType.recovery,
     season: Season.summer,
-    imageUrl: 'android/assets/n.avif',
+    imageUrl: 'assets/n.jpg',
     duration: 35,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -264,7 +264,7 @@ const tripsData = [
     title: 'Felsenstrand',
     tripType: TripType.exploration,
     season: Season.summer,
-    imageUrl: 'android/assets/o.avif',
+    imageUrl: 'assets/o.jpg',
     duration: 45,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -291,7 +291,7 @@ const tripsData = [
     title: 'Die Große Wüste',
     tripType: TripType.activities,
     season: Season.winter,
-    imageUrl: 'android/assets/p.avif',
+    imageUrl: 'assets/p.jpg',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -319,7 +319,7 @@ const tripsData = [
     title: 'Die Westwüste',
     tripType: TripType.activities,
     season: Season.winter,
-    imageUrl: 'android/assets/q.avif',
+    imageUrl: 'assets/q.jpg',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -346,7 +346,7 @@ const tripsData = [
     title: 'Die Sandwüste',
     tripType: TripType.activities,
     season: Season.winter,
-    imageUrl: 'android/assets/r.avif',
+    imageUrl: 'assets/r.jpg',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -373,7 +373,7 @@ const tripsData = [
     title: 'Die erste Stadt',
     tripType: TripType.activities,
     season: Season.winter,
-    imageUrl: 'android/assets/s.avif',
+    imageUrl: 'assets/s.jpg',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -400,7 +400,7 @@ const tripsData = [
     title: 'Die zweite Stadt',
     tripType: TripType.activities,
     season: Season.spring,
-    imageUrl: 'android/assets/t.avif',
+    imageUrl: 'assets/t.jpg',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -427,7 +427,7 @@ const tripsData = [
     title: 'Die alte Stadt',
     tripType: TripType.activities,
     season: Season.winter,
-    imageUrl: 'android/assets/u.avif',
+    imageUrl: 'assets/u.jpg',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -454,7 +454,7 @@ const tripsData = [
     title: 'Skisport',
     tripType: TripType.activities,
     season: Season.winter,
-    imageUrl: 'android/assets/v.avif',
+    imageUrl: 'assets/v.jpg',
     duration: 30,
     activities: [
       'Besuch von archäologischen Stätten',
@@ -482,7 +482,7 @@ const tripsData = [
     title: 'Fallschirmspringen',
     tripType: TripType.activities,
     season: Season.winter,
-    imageUrl: 'android/assets/w.avif',
+    imageUrl: 'assets/w.jpg',
     duration: 30,
     activities: [
       'Fallschirmspringen',

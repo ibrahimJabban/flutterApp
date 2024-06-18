@@ -84,7 +84,7 @@ class TripItem extends StatelessWidget {
                     topLeft: Radius.circular(15),
                     topRight: Radius.circular(15),
                   ),
-                  child: imageUrl.startsWith('android/assets/')
+                  child: imageUrl.startsWith('assets/')
                       ? Image.asset(
                           imageUrl,
                           height: 250,
